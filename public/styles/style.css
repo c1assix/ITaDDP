@@ -230,13 +230,13 @@
 }
 
 .star-small{
-    height: 20px !important;
-    width: 20px !important;
+    height: 20px;
+    width: 20px;
 }
 
 .star-medium{
-    height: 28px !important;
-    width: 28px !important;
+    height: 28px;
+    width: 28px;
 }
 
 
@@ -794,7 +794,10 @@ footer {
     grid-area: footer;
 }
 
+
 a{
     cursor: pointer;
+    text-decoration: none;
+    color: black;
 }
 

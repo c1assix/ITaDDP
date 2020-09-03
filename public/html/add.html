@@ -13,17 +13,17 @@
 <body>
 <header role="banner" class="header">
     <div class="header-item">
-        <a class="header-title">Cocktail Database</a>
+        <a href="main.html" class="header-title">Cocktail Database</a>
     </div>
 
     <div class="header-item">
         <nav class="menu">
             <ul class="list-menu">
                 <li class="menu-item">
-                    <a class="menu-link" href="#">Sign In</a>
+                    <a href="login.html" class="menu-link" href="#">Sign In</a>
                 </li>
                 <li class="menu-item menu-item-border">
-                    <a class="menu-link" href="#">Sign Up</a>
+                    <a href="register.html" class="menu-link" href="#">Sign Up</a>
                 </li>
             </ul>
         </nav>
@@ -71,22 +71,22 @@
                 <div class="add-cocktail-card-main">
                     <ul class="ingredient-select-block">
                         <li class="ingredient-select">
-                            <label class="ingredient-select-title">Whiskey</label>
-                            <input class="ingredient-select-input" type="number">
+                            <label  for="ingredient1" class="ingredient-select-title">Whiskey</label>
+                            <input id="ingredient1" class="ingredient-select-input" type="number">
                             <span class="ingredient-select-span">ml</span>
                             <button class="ingredient-select-button">✖</button>
                         </li>
 
                         <li class="ingredient-select">
-                            <label class="ingredient-select-title">Whiskey</label>
-                            <input class="ingredient-select-input" type="number">
+                            <label for="ingredient2" class="ingredient-select-title">Whiskey</label>
+                            <input id="ingredient2" class="ingredient-select-input" type="number">
                             <span class="ingredient-select-span">ml</span>
                             <button class="ingredient-select-button">✖</button>
                         </li>
 
                         <li class="ingredient-select">
-                            <label class="ingredient-select-title">Whiskey</label>
-                            <input class="ingredient-select-input" type="number">
+                            <label for="ingredient3" class="ingredient-select-title">Whiskey</label>
+                            <input id="ingredient3" class="ingredient-select-input" type="number">
                             <span class="ingredient-select-span">ml</span>
                             <button class="ingredient-select-button">✖</button>
                         </li>
@@ -99,14 +99,14 @@
     </div>
 </main>
 
-<footer footer role="contentinfo">
+<footer>
     <hr class="hr-footer">
     <div class="footer">
     <span class="copyright">© Cocktail Database, 2020</span>
     <nav class="menu">
         <ul class="list-menu">
             <li class="menu-item">
-                <a><div class="vk-logo"></div></a>
+                <a href="https://vk.com/levkupchinov"><div class="vk-logo"></div></a>
             </li>
         </ul>
     </nav>
