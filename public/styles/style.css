@@ -1,0 +1,800 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #E1F5FE;
+    padding: 7px 0;
+}
+
+.header-item{
+    margin: 0 20px;
+}
+
+.header-title{
+    font-family: Roboto, serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    color: #00BCD4;
+}
+
+.list-menu{
+    display: flex;
+    margin: 0;
+    padding-left: 0;
+}
+
+.menu-item{
+    padding: 5px 10px;
+    list-style-type: none;
+    margin: 0 7px;
+}
+
+.menu-item-border{
+    border: 1px solid #C4C4C4;
+    border-radius: 5px;
+}
+
+.menu-item-border{
+    border: 1px solid black;
+}
+
+.menu-link {
+    text-decoration: none;
+    font-family: Roboto, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 33px;
+    color: #757575;
+}
+
+.flex-column{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.add-cocktail-button{
+    background: #00BCD4;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;    
+    text-align: center;
+    color: #FFFFFF;
+    border: 0;
+    padding: 5px 20px;
+    margin: 5px 0;
+}
+
+.search-block{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+
+.search-input{
+    background: #FFFFFF;
+    border: 1px solid #2286C3;    
+    border-radius: 10px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.form-wrap{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form{
+    background: #FFFFFF;
+    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    max-width: 550px;
+    width: 90%;
+    padding: 30px;
+    margin: 20px;
+}
+
+.form-bottom{
+    display: flex;
+    justify-content: center;    
+    margin: 10px 0 20px 0;
+}
+
+.form-main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.form-input-button{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;    
+    text-align: center;
+    color: #FFFFFF;
+    background: #00BCD4;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    border: 0;
+    padding: 7px 30px;
+}
+
+.form-title{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 56px;    
+    text-align: center;
+    color: #000000;
+    margin: 0;
+}
+
+.form-input-block{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-input-label{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px; 
+    color: #000000;
+}
+
+.form-input{
+    opacity: 0.5;
+    border: 2px solid #B0BEC5;
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px; 
+}
+
+.cocktail-glass{
+    background: url("../img/glass.svg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 180px;
+    width: 100px;
+}
+
+.cocktail-form{
+    background: white;
+    margin: 0 20px;
+    box-shadow: 0px 7px 4px rgba(34, 134, 195, 0.25);
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cocktail-main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cocktail-description{
+    font-family: Source Sans Pro, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    max-width: 390px;
+}
+
+.cocktail-name{
+    text-align: center;
+    margin: 0;
+    font-family: Oswald, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 53px;
+}
+
+.star{
+    background: url("../img/star.svg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 40px;
+    width: 40px;
+}
+
+.star-small{
+    height: 20px !important;
+    width: 20px !important;
+}
+
+.star-medium{
+    height: 28px !important;
+    width: 28px !important;
+}
+
+
+.rating{
+    display: flex;
+    align-items: center;
+
+}
+.rating-digit{
+    font-family: Varela Round, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 43px;
+    padding-top: 7px;
+    padding-left: 15px;
+}
+
+.rating-digit-small{
+    font-size: 25px;
+}
+
+.table-wrap{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 650px));
+    justify-content: center;
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    padding: 40px;
+
+}
+
+.vk-logo{
+    background: url(../img/vk.svg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 60px;
+    height: 35px;
+}
+
+.hr-footer{
+    border-top: 1px solid #2286C3;
+    margin: 0 100px;
+}
+
+.copyright{
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 7px;
+
+}
+
+.cocktail-svg{
+    background: url(../img/glass.svg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 150px;
+    height: 230px;
+}
+
+.ingredient-img{
+    height: 50px;
+}
+
+.ingredient-text{
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    text-align: center;
+    color: #000000;
+
+
+}
+
+.coctail-card-wrap{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.coctail-card{
+    max-width: 500px;
+    filter: drop-shadow(0px 7px 4px rgba(34, 134, 195, 0.25));
+    background: #FFFFFF;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+.coctail-card-first{
+    display: flex;    
+    flex-direction: column;
+    align-items: center;
+}
+
+.coctail-card-name{
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 53px;
+    text-align: center;
+    color: #000000;
+    margin: 0;
+}
+
+.coctail-card-owner{    
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;    
+    text-align: center;
+    color: #000000;
+}
+
+.coctail-card-ingredient{
+    padding: 10px 3px;
+    list-style-type: disc;
+    font-size: 30px;
+}
+
+.coctail-card-ingredient-block{
+    display: flex;
+    align-items: center;
+}
+
+.coctail-card-description{
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 30px;
+    color: #000000;
+}
+
+.coctail-card-row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.add-comment{
+    background: url(../img/addComment.svg) no-repeat;
+    height: 90px;
+    width: 85px;
+    border: 0;
+    cursor: pointer;
+}
+
+.comment-block{
+    display: flex;
+    align-items: center;
+}
+
+.comment-title{    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 59px;
+    text-align: center;
+    color: #000000;
+    padding-right: 10px;
+}
+
+.comment-card{
+    max-width: 550px;
+    background: white;
+    padding: 20px;
+    filter: drop-shadow(0px 7px 4px rgba(34, 134, 195, 0.25));
+    border-radius: 20px;
+    margin: 20px;
+}
+
+.comment-card-username{
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 53px;    
+    text-align: left;    
+    color: #000000;
+    margin: 0;    
+}
+
+.comment-card-text{
+    font-family: Varela Round;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;    
+    align-items: center;
+    color: #000000;
+    margin-bottom: 0;
+
+}
+
+.comment-card-rating{
+    justify-content: end;
+}
+
+.coctail-section{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(34, 134, 195, 0.25);
+    border-radius: 20px;
+    margin: 20px;
+}
+
+.coctail-section-title-block{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.coctail-section-circle{
+    border: solid green 2px;
+    border-radius: 50%;
+    padding: 4px 14px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;   
+    text-align: center;
+    margin-right: 20px;
+}
+
+.coctail-section-title{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 35px;    
+    text-align: center;
+    color: #000000;
+    margin: 0;
+}
+
+.coctail-section-input{
+    opacity: 0.5;
+    border: 2px solid #B0BEC5;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.coctail-section-button{
+    background: #00BCD4;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    border: 0;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;    
+    text-align: center;
+    color: #FFFFFF;
+    padding: 6px 0;
+    margin: 0 30%;
+}
+
+.add-cocktail-card{
+    background: #FFFFFF;
+    border-radius: 20px;
+    filter: drop-shadow(0px 7px 4px rgba(34, 134, 195, 0.25));
+    padding: 20px;
+    margin: 20px;
+
+}
+
+.add-cocktail-card-title{
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 53px;    
+    text-align: center;    
+    color: #000000;
+    margin: 0;
+}
+
+.ingredient-select{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.ingredient-select-title{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;    
+    text-align: center;
+    color: #000000;
+    margin-right: 20px;
+}
+
+.ingredient-select-input{
+    opacity: 0.5;
+    border: 2px solid #B0BEC5;
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;        
+    text-align: center;
+    color: #000000;
+    margin-right: 20px;
+}
+
+.ingredient-select-span{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    color: #000000;
+    margin-right: 20px;
+}
+
+.ingredient-select-button   {    
+    font-size: 25px;    
+    padding: 2px 10px;
+    color: #000000;
+    background: #00BCD4;
+    border-radius: 50px;
+    border: 0;
+    margin-right: 20px;
+}
+
+.cocktail-glass-big{
+    height: 280px;
+    width: 200px;
+}
+
+.add-cocktail-card-main{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.flex-1{
+    flex:1;
+}
+
+.wrap-add-cocktail{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cooment-rating {
+    display: inline-flex;
+  }
+  .cooment-rating-icon {
+    pointer-events: none;
+  }
+  .cooment-rating-icon-star {
+    color: orange;
+  }
+  .cooment-rating-input {
+    position: absolute !important;
+    left: -9999px !important;
+  }
+  .cooment-rating-input-none {
+    display: none;
+  }
+  .cooment-rating-label {
+    cursor: pointer;
+    padding: 0 0.1em;
+    font-size: 2rem;
+  }
+  .cooment-rating-input:checked ~ .cooment-rating-label .cooment-rating-icon-star {
+    color: #ddd;
+  }
+  .cooment-rating:hover .cooment-rating-label .cooment-rating-icon-star {
+    color: orange;
+  }
+  .cooment-rating-input:hover ~ .cooment-rating-label .cooment-rating-icon-star {
+    color: #ddd;
+  }
+
+  .comment-form{
+    background: #FFFFFF;
+    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .comment-form-title{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 56px;
+    color: #000000;     
+    margin-bottom: 10px;  
+  }
+
+  .comment-form-text{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+  }
+
+  .comment-form-textarea{
+    opacity: 0.5;
+    border: 2px solid #B0BEC5;
+    border-radius: 10px;    
+    height: 130px;    
+    margin: 10px 0;
+  }
+
+  .comment-form-buttons{
+      display: flex;
+      justify-content: end;
+  }
+
+  .comment-form-button{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;    
+    text-align: center;    
+    color: #FFFFFF;
+    background: #00BCD4;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    padding: 5px 20px;
+    border: 0;
+    margin: 10px;
+  }
+
+@media screen and (max-width: 370px) {
+    .header {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .menu-link{
+      font-size: 16px;
+      line-height: 15px;
+    }
+    .header-item{
+        margin: 0 5px;
+    }
+    .header-title{
+        font-size: 22px;
+    }
+    .copyright{
+        font-size: 16px;
+    }
+    .coctail-card-row{
+        justify-content: center;
+    }
+    .coctail-section{
+        padding: 15px;
+    }
+    .coctail-section-title{
+        font-size: 18px;
+    }
+    .coctail-section-button{
+        font-size: 18px;
+    }
+    .ingredient-select-input{
+        font-size: 16px;
+        width: 100px;
+        margin-right: 5px;
+    }
+    .ingredient-select-button{
+        font-size: 20px;
+        padding: 2px 8px;
+    }
+    .ingredient-select-title{
+        margin-right: 5px;
+    }
+    .ingredient-select-span{
+        margin-right: 5px;
+    }
+    .rating-digit{
+        font-size: 25px;
+    }
+    .star{
+        height: 30px;
+        width: 30px;
+    }
+    .form-input-label{
+        font-size: 20px;
+    }
+  }
+
+ul{
+    margin-left: 0;
+    padding-left: 0;
+}
+ul > li{
+    list-style-type: none;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background: #F4FCFF;
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+            "header"
+            "main"
+            "footer";
+}
+
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
+
+a{
+    cursor: pointer;
+}
+
