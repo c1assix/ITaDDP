@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="../styles/style.css" rel="stylesheet" type="text/css">
+    <title>Cocktail database</title>
+</head>
+<body>
+<header role="banner" class="header">
+    <div class="header-item">
+        <a class="header-title">Cocktail Database</a>
+    </div>
+
+    <div class="header-item">
+        <nav class="menu">
+            <ul class="list-menu">
+                <li class="menu-item">
+                    <a class="menu-link" href="#">Sign In</a>
+                </li>
+                <li class="menu-item menu-item-border">
+                    <a class="menu-link" href="#">Sign Up</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main role="main">
+    <div class="form-wrap">
+        <h2 class="form-title">Sign in</h2>
+        <form class="form">
+            <div class="form-main">
+                <div class="form-input-block">
+                    <label class="form-input-label" for="form-email">Email address</label>
+                    <input class="form-input" id="form-email" type="email" required>
+                </div> 
+    
+                <div class="form-input-block">
+                    <label class="form-input-label" for="form-password">Password</label>
+                    <input class="form-input" id="form-password" type="password" required minlength="3">
+                </div> 
+
+                <div class="form-input-block">
+                    <label class="form-input-label" for="form-confirm-password">Confirm Password</label>
+                    <input class="form-input" id="form-confirm-password" type="password" required minlength="3">
+                </div>                 
+            </div>            
+
+            <div class="form-bottom">
+                <button type="submit" class="form-input-button">Sign Up</button>
+            </div>            
+        </form>        
+    </div>
+</main>
+
+<footer footer role="contentinfo">
+    <hr class="hr-footer">
+    <div class="footer">
+    <span class="copyright">© Cocktail Database, 2020</span>
+    <nav class="menu">
+        <ul class="list-menu">
+            <li class="menu-item">
+                <a><div class="vk-logo"></div></a>
+            </li>
+        </ul>
+    </nav>
+    </div>
+</footer>
+</body>
+</html>

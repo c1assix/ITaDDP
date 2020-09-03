@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="../styles/style.css" rel="stylesheet" type="text/css">
+    <title>Cocktail database</title>
+</head>
+<body>
+<header role="banner" class="header">
+    <div class="header-item">
+        <a class="header-title">Cocktail Database</a>
+    </div>
+
+    <div class="header-item">
+        <nav class="menu">
+            <ul class="list-menu">
+                <li class="menu-item">
+                    <a class="menu-link" href="#">Sign In</a>
+                </li>
+                <li class="menu-item menu-item-border">
+                    <a class="menu-link" href="#">Sign Up</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main role="main">
+    <div class="coctail-card-wrap">
+        <article class="coctail-card">
+            <div class='coctail-card-row'>
+                <div class="coctail-card-first">
+                    <h3 class="coctail-card-name">Cocktail Name</h3>
+                    <span class="coctail-card-owner">created by "username"</span>
+                    <div class="cocktail-svg"></div>
+                    <div class="rating">
+                        <i class="star star-medium"></i>
+                        <i class="star star-medium"></i>
+                        <i class="star star-medium"></i>
+                        <i class="star star-medium"></i>
+                        <i class="star star-medium"></i>
+                        <span class="rating-digit rating-digit-small">5.0</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="coctail-card-name">Recipe</h3>
+                    <ul>
+                        <li class="coctail-card-ingredient">
+                            <div class="coctail-card-ingredient-block">
+                                <span class="ingredient-text">100 ml of Whiskey</span>
+                                <img class="ingredient-img" src="../img/Whiskey.gif">
+                            </div>
+                        </li>
+
+                        <li class="coctail-card-ingredient">
+                            <div class="coctail-card-ingredient-block">
+                                <span class="ingredient-text">100 ml of Whiskey</span>
+                                <img class="ingredient-img" src="../img/Whiskey.gif">
+                            </div>
+                        </li>
+
+                        <li class="coctail-card-ingredient">
+                            <div class="coctail-card-ingredient-block">
+                                <span class="ingredient-text">100 ml of Whiskey</span>
+                                <img class="ingredient-img" src="../img/Whiskey.gif">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+            
+
+                <div>
+                    <h3 class="coctail-card-name">Description123</h3>
+                    <p class="coctail-card-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam metus dui, posuere sed commodo ac, luctus eu dolor. Quisque quis aliquet tortor, ac interdum nisl. Praesent gravida eros nec sapien ultricies, sit amet viverra odio vehicula. </p>
+                </div>   
+            </div>     
+        </article>
+
+        <div class="comment-block">
+            <h2 class="comment-title">Comments</h2>
+            <button class="add-comment"></button>
+        </div>
+
+        <ul>
+            <li>
+                <article class="comment-card">
+                    <h3 class="comment-card-username">
+                        Username
+                    </h3>
+                    <p class="comment-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam metus dui, posuere sed commodo ac, luctus eu dolor. Quisque quis aliquet tortor, ac interdum nisl. Praesent gravida eros nec sapien ultricies, sit amet viverra odio vehicula. </p>
+                    <div class="rating comment-card-rating">
+                        <i class="star star-small"></i>
+                        <i class="star star-small"></i>
+                        <i class="star star-small"></i>
+                        <i class="star star-small"></i>
+                        <i class="star star-small"></i>                       
+                    </div>
+                </article>
+            </li>
+
+            <li>
+                <article class="comment-card">
+                    <h3 class="comment-card-username">
+                        Username
+                    </h3>
+                    <p class="comment-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam metus dui, posuere sed commodo ac, luctus eu dolor. Quisque quis aliquet tortor, ac interdum nisl. Praesent gravida eros nec sapien ultricies, sit amet viverra odio vehicula. </p>
+                    <div class="rating comment-card-rating">
+                        <i class="star star-small"></i>
+                        <i class="star star-small"></i>
+                        <i class="star star-small"></i>
+                        <i class="star star-small"></i>
+                        <i class="star star-small"></i>                        
+                    </div>
+                </article>
+            </li>
+
+            <li>
+                <article class="comment-card">
+                    <h3 class="comment-card-username">
+                        Username
+                    </h3>
+                    <p class="comment-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam metus dui, posuere sed commodo ac, luctus eu dolor. Quisque quis aliquet tortor, ac interdum nisl. Praesent gravida eros nec sapien ultricies, sit amet viverra odio vehicula. </p>
+                    <div class="rating comment-card-rating">
+                        <i class="star star-small"></i>
+                        <i class="star star-small"></i>
+                        <i class="star star-small"></i>
+                        <i class="star star-small"></i>
+                        <i class="star star-small"></i>                        
+                    </div>
+                </article>
+            </li>
+        </ul>
+    </div>
+    
+</main>
+
+<footer footer role="contentinfo">
+    <hr class="hr-footer">
+    <div class="footer">
+    <span class="copyright">© Cocktail Database, 2020</span>
+    <nav class="menu">
+        <ul class="list-menu">
+            <li class="menu-item">
+                <a><div class="vk-logo"></div></a>
+            </li>
+        </ul>
+    </nav>
+    </div>
+</footer>
+</body>
+</html>

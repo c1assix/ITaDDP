@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="../styles/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="../fonts/fontawesome/css/all.min.css">
+    <title>Cocktail database</title>
+</head>
+<body>
+<header role="banner" class="header">
+    <div class="header-item">
+        <a class="header-title">Cocktail Database</a>
+    </div>
+
+    <div class="header-item">
+        <nav class="menu">
+            <ul class="list-menu">
+                <li class="menu-item">
+                    <a class="menu-link" href="#">Sign In</a>
+                </li>
+                <li class="menu-item menu-item-border">
+                    <a class="menu-link" href="#">Sign Up</a>
+                </li>   
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main role="main">
+    <div class="cocktail-main">
+        <form class="comment-form">
+            <h2 class="comment-form-title">Your review</h2>
+            <span class="comment-form-text">You're rating the “Cocktail Name”</span>            
+            <div class="cooment-rating">                                
+                <label aria-label="1 star" class="cooment-rating-label" for="rating-1"> <i class="cooment-rating-icon cooment-rating-icon-star fa fa-star"></i></label>
+                <input class="cooment-rating-input" name="rating" id="rating-1" value="1" checked type="radio">
+                <label aria-label="2 stars" class="cooment-rating-label" for="rating-2"> <i class="cooment-rating-icon cooment-rating-icon-star fa fa-star"></i></label>
+                <input class="cooment-rating-input" name="rating" id="rating-2" value="2" type="radio">
+                <label aria-label="3 stars" class="cooment-rating-label" for="rating-3"><i class="cooment-rating-icon cooment-rating-icon-star fa fa-star"></i></label>
+                <input class="cooment-rating-input" name="rating" id="rating-3" value="3" type="radio">
+                <label aria-label="4 stars" class="cooment-rating-label" for="rating-4"><i class="cooment-rating-icon cooment-rating-icon-star fa fa-star"></i></label>
+                <input class="cooment-rating-input" name="rating" id="rating-4" value="4" type="radio">
+                <label aria-label="5 stars" class="cooment-rating-label" for="rating-5"><i class="cooment-rating-icon cooment-rating-icon-star fa fa-star"></i></label>
+                <input class="cooment-rating-input" name="rating" id="rating-5" value="5" type="radio">
+            </div>            
+            <textarea class="comment-form-textarea"></textarea>            
+            <div class="comment-form-buttons">
+                <button type="submit" class="comment-form-button">Add</button>
+                <button class="comment-form-button">Cancel</button>
+            </div>
+        </form>
+    </div>
+</main>
+
+<footer footer role="contentinfo">
+    <hr class="hr-footer">
+    <div class="footer">
+    <span class="copyright">© Cocktail Database, 2020</span>
+    <nav class="menu">
+        <ul class="list-menu">
+            <li class="menu-item">
+                <a><div class="vk-logo"></div></a>
+            </li>
+        </ul>
+    </nav>
+    </div>
+</footer>
+</body>
+</html>
