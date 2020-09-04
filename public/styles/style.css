@@ -59,7 +59,7 @@
 
 .add-cocktail-button{
     background: #00BCD4;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 30px;
     font-family: Roboto;
     font-style: normal;
@@ -101,7 +101,7 @@
 
 .form{
     background: #FFFFFF;
-    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     max-width: 550px;
     width: 90%;
@@ -185,7 +185,7 @@
 .cocktail-form{
     background: white;
     margin: 0 20px;
-    box-shadow: 0px 7px 4px rgba(34, 134, 195, 0.25);
+    box-shadow: 0 7px 4px rgba(34, 134, 195, 0.25);
     padding: 30px;
     border-radius: 20px;
     display: flex;
@@ -327,14 +327,14 @@
 
 }
 
-.coctail-card-wrap{
+.cocktail-card-wrap{
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 }
 
-.coctail-card{
+.cocktail-card{
     max-width: 500px;
     filter: drop-shadow(0px 7px 4px rgba(34, 134, 195, 0.25));
     background: #FFFFFF;
@@ -343,13 +343,13 @@
     margin: 20px;
 }
 
-.coctail-card-first{
+.cocktail-card-first{
     display: flex;    
     flex-direction: column;
     align-items: center;
 }
 
-.coctail-card-name{
+.cocktail-card-name{
     font-family: Oswald;
     font-style: normal;
     font-weight: normal;
@@ -360,7 +360,7 @@
     margin: 0;
 }
 
-.coctail-card-owner{    
+.cocktail-card-owner{    
     font-family: Oswald;
     font-style: normal;
     font-weight: normal;
@@ -370,18 +370,18 @@
     color: #000000;
 }
 
-.coctail-card-ingredient{
+.cocktail-card-ingredient{
     padding: 10px 3px;
     list-style-type: disc;
     font-size: 30px;
 }
 
-.coctail-card-ingredient-block{
+.cocktail-card-ingredient-block{
     display: flex;
     align-items: center;
 }
 
-.coctail-card-description{
+.cocktail-card-description{
     font-family: Oswald;
     font-style: normal;
     font-weight: normal;
@@ -390,7 +390,7 @@
     color: #000000;
 }
 
-.coctail-card-row{
+.cocktail-card-row{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -456,23 +456,23 @@
     justify-content: end;
 }
 
-.coctail-section{
+.cocktail-section{
     display: flex;
     flex-direction: column;
     padding: 20px;
     background: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(34, 134, 195, 0.25);
+    box-shadow: 0 4px 4px rgba(34, 134, 195, 0.25);
     border-radius: 20px;
     margin: 20px;
 }
 
-.coctail-section-title-block{
+.cocktail-section-title-block{
     display: flex;
     align-items: center;
     margin-bottom: 10px;
 }
 
-.coctail-section-circle{
+.cocktail-section-circle{
     border: solid green 2px;
     border-radius: 50%;
     padding: 4px 14px;
@@ -485,7 +485,7 @@
     margin-right: 20px;
 }
 
-.coctail-section-title{
+.cocktail-section-title{
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
@@ -496,16 +496,16 @@
     margin: 0;
 }
 
-.coctail-section-input{
+.cocktail-section-input{
     opacity: 0.5;
     border: 2px solid #B0BEC5;
     font-size: 20px;
     padding: 5px;
 }
 
-.coctail-section-button{
+.cocktail-section-button{
     background: #00BCD4;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 30px;
     border: 0;
     font-family: Roboto;
@@ -522,7 +522,7 @@
 .add-cocktail-card{
     background: #FFFFFF;
     border-radius: 20px;
-    filter: drop-shadow(0px 7px 4px rgba(34, 134, 195, 0.25));
+    filter: drop-shadow(0 7px 4px rgba(34, 134, 195, 0.25));
     padding: 20px;
     margin: 20px;
 
@@ -609,34 +609,34 @@
     flex-wrap: wrap;
 }
 
-.cooment-rating {
+.comment-rating {
     display: inline-flex;
   }
-  .cooment-rating-icon {
+  .comment-rating-icon {
     pointer-events: none;
   }
-  .cooment-rating-icon-star {
+  .comment-rating-icon-star {
     color: orange;
   }
-  .cooment-rating-input {
-    position: absolute !important;
-    left: -9999px !important;
+  .comment-rating-input {
+    position: absolute ;
+    visibility: hidden;
   }
-  .cooment-rating-input-none {
+  .comment-rating-input-none {
     display: none;
   }
-  .cooment-rating-label {
+  .comment-rating-label {
     cursor: pointer;
     padding: 0 0.1em;
     font-size: 2rem;
   }
-  .cooment-rating-input:checked ~ .cooment-rating-label .cooment-rating-icon-star {
+  .comment-rating-input:checked ~ .comment-rating-label .comment-rating-icon-star {
     color: #ddd;
   }
-  .cooment-rating:hover .cooment-rating-label .cooment-rating-icon-star {
+  .comment-rating:hover .comment-rating-label .comment-rating-icon-star {
     color: orange;
   }
-  .cooment-rating-input:hover ~ .cooment-rating-label .cooment-rating-icon-star {
+  .comment-rating-input:hover ~ .comment-rating-label .comment-rating-icon-star {
     color: #ddd;
   }
 
@@ -719,16 +719,16 @@
     .copyright{
         font-size: 16px;
     }
-    .coctail-card-row{
+    .cocktail-card-row{
         justify-content: center;
     }
-    .coctail-section{
+    .cocktail-section{
         padding: 15px;
     }
-    .coctail-section-title{
+    .cocktail-section-title{
         font-size: 18px;
     }
-    .coctail-section-button{
+    .cocktail-section-button{
         font-size: 18px;
     }
     .ingredient-select-input{
