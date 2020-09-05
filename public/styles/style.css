@@ -31,6 +31,23 @@
     margin: 0 7px;
 }
 
+.login-span{
+    font-family: Varela Round;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+.menu-button{
+    border: 0;
+    background: #5595ff;
+    color: wheat;
+    padding: 5px 10px;
+    margin: 0 7px;
+    cursor: pointer;
+}
+
 .menu-item-border{
     border: 1px solid #C4C4C4;
     border-radius: 5px;
@@ -445,7 +462,7 @@
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
-    line-height: 22px;    
+    line-height: 22px;
     align-items: center;
     color: #000000;
     margin-bottom: 0;
@@ -722,6 +739,7 @@
       font-size: 16px;
       line-height: 15px;
     }
+
     .header-item{
         margin: 0 5px;
     }

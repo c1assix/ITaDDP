@@ -1,3 +1,5 @@
+import {signIn} from "../../services/FirebaseServise.js";
+
 let Login = {
     render: async () => {
         let view = `
@@ -13,7 +15,9 @@ let Login = {
                 <div class="form-input-block">
                     <label class="form-input-label" for="form-password">Password</label>
                     <input class="form-input" id="form-password" type="password" required minlength="3">
-                </div>                                 
+                </div> 
+                
+                <div class="error-block"><span id="sign-in-error"></span></div>
             </div>            
 
             <div class="form-bottom">
@@ -31,7 +35,16 @@ let Login = {
 
         return view
     },
-    after_render: async () => {                     
+    after_render: async () => {
+        const form = document.getElementById("sign-in-form");
+        const email = document.getElementById("form-email");
+        const password = document.getElementById("form-password");
+        const error_block = document.getElementById("sign-in-error");
+
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+            signIn(email.value, password.value, error_block);
+        });
     }
 }
 
