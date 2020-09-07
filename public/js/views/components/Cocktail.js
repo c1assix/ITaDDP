@@ -1,3 +1,4 @@
+import rating from "./Rating.js";
 
 let gradient = (ingredient, id) => {
     var svgns = 'http://www.w3.org/2000/svg';
@@ -168,11 +169,7 @@ export let CocktailCard = {
         
                         <div>
                             <div class="rating">
-                                <i class="star"></i>
-                                <i class="star"></i>
-                                <i class="star"></i>
-                                <i class="star"></i>
-                                <i class="star"></i>
+                                ${rating(item.rating.toFixed(1), item.id)}
                                 <span class="rating-digit">${item.rating.toFixed(1)}</span>
                             </div>
                         </div>
@@ -206,11 +203,7 @@ export let DetailCocktailCard = {
                         <!--<span class="cocktail-card-owner">created by "username"</span>-->
                         <div class="cocktail-glass">${glass(item.ingredients, item.id)}</div>
                         <div class="rating">
-                            <i class="star star-medium"></i>
-                            <i class="star star-medium"></i>
-                            <i class="star star-medium"></i>
-                            <i class="star star-medium"></i>
-                            <i class="star star-medium"></i>
+                            ${rating(item.rating.toFixed(1), item.id)}
                             <span class="rating-digit rating-digit-small">${item.rating.toFixed(1)}</span>
                         </div>
                     </div>
