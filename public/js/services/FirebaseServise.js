@@ -33,3 +33,26 @@ export  function  logout() {
     });
 }
 
+export async function getIngredients() {
+    const snapshot = await firebase.database().ref('/ingredients').once("value");
+    if (snapshot.exists()){
+        const date = snapshot.val();
+
+        return Object.keys(date).map(ingredientId => {
+            return {...date[ingredientId], id: ingredientId}
+        });
+    }
+}
+
+export function addCocktail(name, description, ingredients) {
+
+    let ref = firebase.database().ref("cocktails/");
+    ref.push({
+        name: name,
+        description: description,
+        ingredients: ingredients,
+        rating: 0
+    });
+    router.navigate("/");
+}
+

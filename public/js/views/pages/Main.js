@@ -1,10 +1,11 @@
+import {linkHelper} from "../../services/LinkHelper.js";
 
 let Main = {
     render: async () => {
         let view = `
         <div class="search-block">
             <input type="search" class="search-input">
-            <a href="add.html" class="add-cocktail-button">Add</a>
+            <a href="/add" id="add-cocktail-button" class="add-cocktail-button">Add</a>
         </div>
         <ul class="table-wrap">
             <li>
@@ -109,7 +110,7 @@ let Main = {
         return view
     },
     after_render: async () => {
-
+        document.getElementById("add-cocktail-button").addEventListener("click", linkHelper);
     }
 }
 

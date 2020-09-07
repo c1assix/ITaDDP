@@ -190,12 +190,7 @@
 }
 
 .cocktail-glass{
-    background: url("../img/glass.svg") no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    height: 180px;
+        height: 180px;
     width: 100px;
 }
 
@@ -320,11 +315,7 @@
 }
 
 .cocktail-svg{
-    background: url(../img/glass.svg) no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+
     width: 150px;
     height: 230px;
 }
@@ -571,6 +562,7 @@
     text-align: center;
     color: #000000;
     margin-right: 20px;
+    min-width: 100px;
 }
 
 .ingredient-select-input{
