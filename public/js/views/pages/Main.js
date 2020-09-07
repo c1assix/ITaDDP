@@ -1,4 +1,7 @@
 import {linkHelper} from "../../services/LinkHelper.js";
+import {getCocktails} from "../../services/FirebaseServise.js";
+import {CocktailCard} from "../components/Cocktail.js";
+import {router} from "../../Router.js";
 
 let Main = {
     render: async () => {
@@ -7,110 +10,27 @@ let Main = {
             <input type="search" class="search-input">
             <a href="/add" id="add-cocktail-button" class="add-cocktail-button">Add</a>
         </div>
-        <ul class="table-wrap">
-            <li>
-                <a href="cocktail.html" class="cocktail-form">
-                    <div class="cocktail-main">
-                        <div class="cocktail-glass"></div>
-                        <div>
-                            <h3 class="cocktail-name">Cocktail Name</h3>
-                            <p class="cocktail-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                                lobortis enim arcu, vitae consequat
-                                nunc vulputate nec. Integer porta sem.</p>
-                        </div>
-                    </div>
-    
-                    <div>
-                        <div class="rating">
-                            <i class="star"></i>
-                            <i class="star"></i>
-                            <i class="star"></i>
-                            <i class="star"></i>
-                            <i class="star"></i>
-                            <span class="rating-digit">5.0</span>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="cocktail.html" class="cocktail-form">
-                    <div class="cocktail-main">
-                        <div class="cocktail-glass"></div>
-                        <div>
-                            <h3 class="cocktail-name">Cocktail Name</h3>
-                            <p class="cocktail-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                                lobortis enim arcu, vitae consequat
-                                nunc vulputate nec. Integer porta sem.</p>
-                        </div>
-                    </div>
-    
-                    <div>
-                        <div class="rating">
-                            <i class="star"></i>
-                            <i class="star"></i>
-                            <i class="star"></i>
-                            <i class="star"></i>
-                            <i class="star"></i>
-                            <span class="rating-digit">5.0</span>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="cocktail.html" class="cocktail-form">
-                    <div class="cocktail-main">
-                        <div class="cocktail-glass"></div>
-                        <div>
-                            <h3 class="cocktail-name">Cocktail Name</h3>
-                            <p class="cocktail-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                                lobortis enim arcu, vitae consequat
-                                nunc vulputate nec. Integer porta sem.</p>
-                        </div>
-                    </div>
-    
-                    <div>
-                        <div class="rating">
-                            <i class="star"></i>
-                            <i class="star"></i>
-                            <i class="star"></i>
-                            <i class="star"></i>
-                            <i class="star"></i>
-                            <span class="rating-digit">5.0</span>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="cocktail.html"class="cocktail-form">
-                    <div class="cocktail-main">
-                        <div class="cocktail-glass"></div>
-                        <div>
-                            <h3 class="cocktail-name">Cocktail Name</h3>
-                            <p class="cocktail-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                                lobortis enim arcu, vitae consequat
-                                nunc vulputate nec. Integer porta sem.</p>
-                        </div>
-                    </div>
-    
-                    <div>
-                        <div class="rating">
-                            <i class="star"></i>
-                            <i class="star"></i>
-                            <i class="star"></i>
-                            <i class="star"></i>
-                            <i class="star"></i>
-                            <span class="rating-digit">5.0</span>
-                        </div>
-                    </div>
-                </a>
-            </li>
-    
-        </ul>`
+        <ul id="cocktail-table" class="table-wrap"></ul>`
 
         return view
     },
     after_render: async () => {
         document.getElementById("add-cocktail-button").addEventListener("click", linkHelper);
+        let cocktails = await getCocktails();
+        let list = document.getElementById("cocktail-table");
+        if(cocktails){
+            for (const element of cocktails) {
+                let item = document.createElement('li');
+                item.id = window.btoa(element.id);
+                let card = await CocktailCard.render(element);
+                item.innerHTML = `${card}`;
+                item.addEventListener('click', (event) =>{
+                    event.preventDefault();
+                    router.navigate(`/cocktail/${item.id}`);
+                });
+                list.appendChild(item);
+            }
+        }
     }
 }
 

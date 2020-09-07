@@ -16,7 +16,7 @@ let AddCocktail = {
                     </div>
                     <input name="name" type="text" class="cocktail-section-input">
                 </section>
-    
+
                 <section class="cocktail-section">
                     <div class="cocktail-section-title-block">
                         <div class="cocktail-section-circle">2</div>
@@ -26,7 +26,7 @@ let AddCocktail = {
                         <option disabled selected value> -- select an option -- </option>
                     </select>
                 </section>
-    
+
                 <section class="cocktail-section">
                     <div class="cocktail-section-title-block">
                         <div class="cocktail-section-circle">3</div>
@@ -34,7 +34,7 @@ let AddCocktail = {
                     </div>
                     <textarea name="description" class="cocktail-section-input"></textarea>
                 </section>
-    
+
                 <section class="cocktail-section">
                     <div class="cocktail-section-title-block">
                         <div class="cocktail-section-circle">4</div>
@@ -43,16 +43,16 @@ let AddCocktail = {
                     <input type="submit" class="cocktail-section-button" value="Add">
                 </section>
             </div>
-            <div class="flex-1">     
+            <div class="flex-1">
                 <section class="add-cocktail-card">
                 <h3 class="add-cocktail-card-title">Cocktail Name</h3>
                 <div class="add-cocktail-card-main">
                     <ul class="ingredient-select-block" id="ingredients-ul"></ul>
                     <div id="cocktail-glass" class="cocktail-glass cocktail-glass-big">
-                        
+
                     </div>
                 </div>
-            </section>       
+            </section>
             </div>
         </form>`
 

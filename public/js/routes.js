@@ -2,6 +2,7 @@ import Login from "./views/pages/Login.js";
 import Register from "./views/pages/Register.js";
 import Main from "./views/pages/Main.js";
 import AddCocktail from "./views/pages/AddCocktail.js";
+import Cocktail from "./views/pages/Coctail.js";
 
 export const routes = [
     {
@@ -19,6 +20,10 @@ export const routes = [
     {
         path: '/add',
         page: AddCocktail,
+    },
+    {
+        path: '/cocktail/:id',
+        page: Cocktail,
     }
 ];
 

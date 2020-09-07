@@ -154,3 +154,82 @@ export let glass = (ingredient, id) => {
     `
     return view;
 }
+
+export let CocktailCard = {
+    render: async (item) => {
+        let view = `<a href="cocktail/${window.btoa(item.id)}" id="${window.btoa(item.id)}" class="cocktail-form">
+                        <div class="cocktail-main">
+                            <div class="cocktail-glass">${glass(item.ingredients, item.id)}</div>
+                            <div class="flex-1">
+                                <h3 class="cocktail-name">${item.name}</h3>
+                                <p class="cocktail-description">${item.description}.</p>
+                            </div>
+                        </div>
+        
+                        <div>
+                            <div class="rating">
+                                <i class="star"></i>
+                                <i class="star"></i>
+                                <i class="star"></i>
+                                <i class="star"></i>
+                                <i class="star"></i>
+                                <span class="rating-digit">${item.rating.toFixed(1)}</span>
+                            </div>
+                        </div>
+                    </a>`
+
+        return view
+    }
+}
+
+
+
+let IngredientBlock = (ingredients) => {
+    let li = document.createElement('li');
+    li.className = "cocktail-card-ingredient";
+    for (const ingredient of ingredients) {
+        li.innerHTML += `<div class="cocktail-card-ingredient-block">
+                              <span class="ingredient-text">${ingredient.amount} ml of ${ingredient.name}</span>
+                              <img class="ingredient-img" src="../img/Whiskey.gif">
+                          </div>`
+    }
+    return li.innerHTML
+}
+
+export let DetailCocktailCard = {
+    render: async (item) => {
+        let view = `
+            
+                <div class='cocktail-card-row'>
+                    <div class="cocktail-card-first">
+                        <h3 class="cocktail-card-name">${item.name}</h3>
+                        <!--<span class="cocktail-card-owner">created by "username"</span>-->
+                        <div class="cocktail-glass">${glass(item.ingredients, item.id)}</div>
+                        <div class="rating">
+                            <i class="star star-medium"></i>
+                            <i class="star star-medium"></i>
+                            <i class="star star-medium"></i>
+                            <i class="star star-medium"></i>
+                            <i class="star star-medium"></i>
+                            <span class="rating-digit rating-digit-small">${item.rating.toFixed(1)}</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="cocktail-card-name">Recipe</h3>
+                        <ul>
+                            ${IngredientBlock(item.ingredients)}
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                
+    
+                    <div>
+                        <h3 class="cocktail-card-name">Description</h3>
+                        <p class="cocktail-card-description">${item.description}</p>
+                    </div>   
+                </div>     
+            `
+        return view;
+    }
+}
