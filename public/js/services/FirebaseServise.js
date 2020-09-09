@@ -10,7 +10,6 @@ export function signIn(email, password, error_block) {
         })
         .catch(error => {
             error_block.innerHTML = error.message;
-            console.log(error);
         })
 }
 

@@ -30,11 +30,10 @@ let Header = {
         return view
     },
     after_render: async () => {
-        console.log(firebase.auth().currentUser)
+        document.getElementById("home-button").addEventListener("click", linkHelper);
         if(!localStorage.getItem('user')) {
             document.getElementById("sign-in-button").addEventListener("click", linkHelper);
             document.getElementById("sign-up-button").addEventListener("click", linkHelper);
-            document.getElementById("home-button").addEventListener("click", linkHelper);
         }
         else{
             document.getElementById("logout-button").addEventListener("click", logout)

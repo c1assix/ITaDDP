@@ -13,7 +13,6 @@ let star = (amount, id, cocktail_id) => {
 }
 
 let rating = (amount, cocktail_id) => {
-    console.log(amount);
     let div = document.createElement('div');
     for (let i = 1; i <= 5; i++) {
         if(i <   amount){

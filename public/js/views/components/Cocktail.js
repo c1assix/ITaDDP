@@ -22,12 +22,10 @@ let gradient = (ingredient, id) => {
         gradient.appendChild(stop);
         offset += step * (element.amount/10);
     })
-    console.log(gradient.outerHTML);
     return gradient.outerHTML;
 }
 
 export let glass = (ingredient, id) => {
-    console.log(ingredient);
     let view = `
         <svg id="Слой_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
         <g>        

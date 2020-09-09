@@ -1,4 +1,5 @@
 import {signIn} from "../../services/FirebaseServise.js";
+import {linkHelper} from "../../services/LinkHelper.js";
 
 let Login = {
     render: async () => {
@@ -21,7 +22,7 @@ let Login = {
             </div>            
 
             <div class="form-bottom">
-                <button type="submit" class="form-input-button" id="sign-in-button">Sign in</button>
+                <button type="submit" class="form-input-button">Sign in</button>
             </div>            
         </form>
 
@@ -29,7 +30,7 @@ let Login = {
             <div class="form-main">
                 <span class="form-input-label">Don't have an account? Sign up</span>
             </div>            
-            <a class="form-input-button">Sign Up</a>            
+            <a href="/register" class="form-input-button" id="no-account-button">Sign Up</a>            
         </div>
     </div>`
 
@@ -41,6 +42,7 @@ let Login = {
         const password = document.getElementById("form-password");
         const error_block = document.getElementById("sign-in-error");
 
+        document.getElementById("no-account-button").addEventListener("click", linkHelper);
         form.addEventListener("submit", (event) => {
             event.preventDefault();
             signIn(email.value, password.value, error_block);
