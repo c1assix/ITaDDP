@@ -8,22 +8,27 @@ export const routes = [
     {
         path: '/login',
         page: Login,
+        auth: false
     },
     {
         path: '/register',
         page: Register,
+        auth: false
     },
     {
         path: '/',
         page: Main,
+        auth: false
     },
     {
         path: '/add',
         page: AddCocktail,
+        auth: true
     },
     {
         path: '/cocktail/:id',
         page: Cocktail,
+        auth: false
     }
 ];
 

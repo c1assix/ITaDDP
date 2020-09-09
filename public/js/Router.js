@@ -3,6 +3,7 @@ import Error404 from "./views/pages/Error404.js";
 import Header from "./views/components/Header.js";
 import Footer from "./views/components/Footer.js";
 import {routes} from "./routes.js";
+import Error403 from "./views/pages/Error403.js";
 
 
 class Router {
@@ -48,9 +49,17 @@ class Router {
 
         this.currentPage = Error404
 
-        for (const { path, page} of routes) {
+        for (const { path, page, auth} of routes) {
             if (path === url){
-                this.currentPage = page;
+                if (auth){
+                    if (localStorage.getItem('user')){
+                        this.currentPage = page;
+                    }else{
+                        this.currentPage = Error403;
+                    }
+                }else{
+                    this.currentPage = page;
+                }
             }
         }
 
