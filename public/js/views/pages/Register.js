@@ -36,12 +36,28 @@ let Register = {
         const form = document.getElementById("sign-up-form");
         const email = document.getElementById("form-email");
         const password = document.getElementById("form-password");
+        const confirm_password = document.getElementById("form-confirm-password");;
         const error_block = document.getElementById("sign-up-error");
+
+        password.addEventListener('keyup', () => {
+            validatePassword(password, confirm_password)
+        });
+        confirm_password.addEventListener('keyup', () => {
+            validatePassword(password, confirm_password)
+        });
 
         form.addEventListener("submit", (event) => {
             event.preventDefault();
             signUp(email.value, password.value, error_block);
         });
+    }
+}
+
+function validatePassword (pass, conf_pass){
+    if(pass.value !== conf_pass.value) {
+        conf_pass.setCustomValidity("Passwords don't match");
+    } else {
+        conf_pass.setCustomValidity('');
     }
 }
 
