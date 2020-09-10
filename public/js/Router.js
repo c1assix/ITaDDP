@@ -16,6 +16,9 @@ class Router {
     }
 
     _onPopState(){
+        if (this.currentPage && this.currentPage.destroy){
+            this.currentPage.destroy();
+        }
         router.loadPage(router.parseCurrentURL())
     }
 
@@ -31,6 +34,9 @@ class Router {
 
 
     navigate(url) {
+        if (this.currentPage && this.currentPage.destroy){
+            this.currentPage.destroy();
+        }
         history.pushState({}, "", url);
         let parseURL = this.parseCurrentURL()
         router.loadPage(parseURL)

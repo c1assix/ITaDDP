@@ -80,3 +80,33 @@ export function getCocktail(id, callback) {
     });
 }
 
+export async function writeComment(id, comment, email, rating) {
+    let ref = firebase.database().ref("cocktails/" + id + "/comments");
+    let refCock = firebase.database().ref("cocktails/" + id);
+    console.log(comment);
+    ref.push({
+        text: comment,
+        name: email,
+        rating: parseInt(rating),
+    });
+
+    const snapshot = await ref.once("value");
+    const comments = Object.values(snapshot.val());
+    const ratings = comments.map((comment) => {
+        return comment.rating
+    });
+    await refCock.update({rating: ratings.reduce((a, b) => a + b, 0) / comments.length});
+}
+
+export function getComments(id, callback) {
+    firebase.database().ref('/cocktails/' + id + '/comments').on("value", (snapshot) => {
+        if (snapshot.exists()) {
+            const date = snapshot.val();
+
+            callback(   Object.keys(date).map(cocktailId => {
+                return {...date[cocktailId], id: cocktailId}
+            })  );
+        }
+    });
+}
+

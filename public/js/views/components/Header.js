@@ -4,7 +4,7 @@ import {logout} from "../../services/FirebaseServise.js";
 let Header = {
 
     render: async () => {
-        let authorized = `<span class="login-span">denekyn@gmal.com</span>
+        let authorized = `<span class="login-span">${localStorage.getItem('user')}</span>
                           <button class="menu-button" id="logout-button">Logout</button>`;
         let non_authorized =
             `</nav>
