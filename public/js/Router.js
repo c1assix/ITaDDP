@@ -8,14 +8,14 @@ import Error403 from "./views/pages/Error403.js";
 
 class Router {
     constructor() {
-        window.addEventListener('popstate', event => this._onPopState(event));
+        window.addEventListener('popstate', event => this.onPopState(event));
         if (!Router.instance) {
             Router.instance = this;
         }
         return Router.instance;
     }
 
-    _onPopState(){
+    onPopState(){
         if (this.currentPage && this.currentPage.destroy){
             this.currentPage.destroy();
         }
@@ -23,10 +23,6 @@ class Router {
     }
 
     init() {
-        if (Router._instance != null) {
-            return Router._instance;
-        }
-
         const path = window.location.pathname;
         window.history.replaceState({path}, path, path);
         router.navigate(window.location.pathname);

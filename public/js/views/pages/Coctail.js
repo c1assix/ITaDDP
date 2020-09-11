@@ -14,7 +14,7 @@ let Cocktail = {
             
             <div class="comment-block">
                 <h2 class="comment-title">Comments</h2>
-                <a class="add-comment" id="open-button"></a>
+                <button class="add-comment" id="open-button"></button>
             </div>    
             <ul id="comment-ul"></ul>
         </div>`
