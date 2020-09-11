@@ -69,7 +69,6 @@ let AddCocktail = {
             select.appendChild(option);
         })
 
-
         const ul = document.getElementById("ingredients-ul");
         ul.addEventListener("change",event => {
             if (event.target.validity.valid){
@@ -106,6 +105,7 @@ let AddCocktail = {
             addCocktail(
                 form.elements['name'].value,
                 form.elements['description'].value,
+                localStorage.getItem('user'),
                 getCurrentIngredients(ingredients)
             );
         })

@@ -185,7 +185,7 @@ let IngredientBlock = (ingredients) => {
     for (const ingredient of ingredients) {
         li.innerHTML += `<div class="cocktail-card-ingredient-block">
                               <span class="ingredient-text">${ingredient.amount} ml of ${ingredient.name}</span>
-                              <img class="ingredient-img" src="../img/Whiskey.gif">
+                              <img class="ingredient-img" src="../img/${ingredient.name}.gif">
                           </div>`
     }
     return li.innerHTML
@@ -198,7 +198,7 @@ export let DetailCocktailCard = {
                 <div class='cocktail-card-row'>
                     <div class="cocktail-card-first">
                         <h3 class="cocktail-card-name">${item.name}</h3>
-                        <!--<span class="cocktail-card-owner">created by "username"</span>-->
+                        <span class="cocktail-card-owner">created by ${item.owner}</span>
                         <div class="cocktail-glass">${glass(item.ingredients, item.id)}</div>
                         <div class="rating">
                             ${rating(item.rating.toFixed(1), item.id)}

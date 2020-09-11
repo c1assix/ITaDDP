@@ -16,7 +16,7 @@ let Cocktail = {
                 <h2 class="comment-title">Comments</h2>
                 <button class="add-comment" id="open-button"></button>
             </div>    
-            <ul id="comment-ul"></ul>
+            <ul class="comment-ul" id="comment-ul"></ul>
         </div>`
 
         return view

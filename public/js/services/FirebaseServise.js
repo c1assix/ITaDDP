@@ -43,11 +43,12 @@ export async function getIngredients() {
     }
 }
 
-export function addCocktail(name, description, ingredients) {
+export function addCocktail(name, description, owner, ingredients) {
 
     let ref = firebase.database().ref("cocktails/");
     ref.push({
         name: name,
+        owner: owner,
         description: description,
         ingredients: ingredients,
         rating: 0
