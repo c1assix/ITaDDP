@@ -77,20 +77,18 @@ let AddCocktail = {
             }
         })
 
-        ul.addEventListener("click",event => {
-            if (event.target.nodeName === "BUTTON"){
-                Ingredient.delete(event.target.parentElement, select);
-                document.getElementById("cocktail-glass")
-                    .innerHTML = glass(getCurrentIngredients(ingredients), null);
-            }
-        })
-
         select.addEventListener('change', async event => {
             for (let opt of event.target.children) {
                 if (opt.selected) {
                     select.remove(opt.index);
                     let li = await Ingredient.render(opt.dataset.ingredientId, opt.value);
-                    ul.innerHTML += li;
+                    ul.appendChild(li);
+                    li.addEventListener("click", (event)=>
+                    {
+                        Ingredient.delete(event.target.parentElement, select);
+                        document.getElementById("cocktail-glass")
+                            .innerHTML = glass(getCurrentIngredients(ingredients), null);
+                    })
                     select[0].selected = true;
                     document.getElementById("cocktail-glass")
                         .innerHTML = glass(getCurrentIngredients(ingredients), null);
