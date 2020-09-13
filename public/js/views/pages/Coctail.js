@@ -5,6 +5,7 @@ import Modal from "../components/Modal.js";
 import CommentModal from "../components/CommentModal.js";
 import {getComments} from "../../services/FirebaseServise.js";
 import CommentCard from "../components/Comment.js";
+import Error404 from "./Error404.js";
 
 let Cocktail = {
     render: async () => {
@@ -22,7 +23,16 @@ let Cocktail = {
         return view
     },
     after_render: async () => {
-        const main =document.getElementById("main-root")
+        const main = document.getElementById("main-root");
+        let CocktailId;
+        try {
+            CocktailId = window.atob((Utils.parseRequestURL().id).toString())
+        } catch (e) {
+            main.innerHTML = await Error404.render();
+            return;
+        }
+
+
         if(localStorage.getItem('user')){
             main.innerHTML += await CommentModal.render();
             await CommentModal.after_render();
@@ -32,8 +42,6 @@ let Cocktail = {
             main.innerHTML += await Modal.render(content);
             await Modal.after_render();
         }
-
-        let CocktailId = window.atob((Utils.parseRequestURL().id).toString())
 
         let cardBlock = document.getElementById("cocktail-card-block")
         getCocktail(CocktailId, async (cocktail) => {
@@ -54,8 +62,11 @@ let Cocktail = {
         });
     },
     destroy() {
-        let CocktailId = window.atob((Utils.parseRequestURL().id).toString())
-        firebase.database().ref('/cocktails/' + CocktailId + '/comments').off("value");
+        try {
+            let CocktailId = window.atob((Utils.parseRequestURL().id).toString())
+            firebase.database().ref('/cocktails/' + CocktailId + '/comments').off("value");
+        }catch (e) {
+        }
     }
 }
 
