@@ -21,10 +21,10 @@ export let CommentModal = {
                 <label aria-label="5 stars" class="comment-rating-label" for="rating-5"><i class="comment-rating-icon comment-rating-icon-star fa fa-star"></i></label>
                 <input class="comment-rating-input" name="rating" id="rating-5" value="5" type="radio">
             </div>            
-            <textarea id="comment-text" class="comment-form-textarea"></textarea>            
+            <textarea id="comment-text" class="comment-form-textarea" required minlength="10"></textarea>            
             <div class="comment-form-buttons">
                 <button type="submit" class="comment-form-button">Add</button>
-                <button class="comment-form-button">Cancel</button>
+                <button class="comment-form-button" type="reset">Cancel</button>
             </div>
         </form>
     </div>`
@@ -47,6 +47,11 @@ export let CommentModal = {
             const email = localStorage.getItem('user');
             const rating = document.querySelector('input[name="rating"]:checked').value;
             await writeComment(CocktailId, comment, email, rating);
+        });
+
+        form.addEventListener("reset", async (e) => {
+            modal.classList.toggle("closed");
+            modalOverlay.classList.toggle("closed");
         });
     }
 }
