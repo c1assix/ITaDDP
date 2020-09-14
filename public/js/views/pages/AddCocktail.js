@@ -83,7 +83,7 @@ let AddCocktail = {
                     select.remove(opt.index);
                     let li = await Ingredient.render(opt.dataset.ingredientId, opt.value);
                     ul.appendChild(li);
-                    li.addEventListener("click", (event)=>
+                    document.getElementById(`button-ingredient-${opt.dataset.ingredientId}`).addEventListener("click", (event)=>
                     {
                         Ingredient.delete(event.target.parentElement, select);
                         document.getElementById("cocktail-glass")
