@@ -6,10 +6,12 @@ import CommentModal from "../components/CommentModal.js";
 import {getComments} from "../../services/FirebaseServise.js";
 import CommentCard from "../components/Comment.js";
 import Error404 from "./Error404.js";
+import Loader from "../components/Loader.js";
 
 let Cocktail = {
     render: async () => {
         let view = `
+        ${Loader.render()}
         <div class="cocktail-card-wrap">
             <article id="cocktail-card-block" class="cocktail-card"> </article>
             
@@ -47,18 +49,19 @@ let Cocktail = {
         getCocktail(CocktailId, async (cocktail) => {
             let card = await DetailCocktailCard.render(cocktail);
             cardBlock.innerHTML = card;
+            Loader.delete();
         })
 
         getComments(CocktailId, async (comments) => {
             let list = document.getElementById("comment-ul");
             list.innerHTML = ``;
             for (const element of comments) {
-                console.log(element);
                 let item = document.createElement('li');
                 let comment = await CommentCard.render(element);
                 item.innerHTML = `${comment}`;
                 list.appendChild(item);
             }
+            Loader.delete();
         });
     },
     destroy() {

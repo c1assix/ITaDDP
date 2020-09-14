@@ -2,6 +2,7 @@ import {linkHelper} from "../../services/LinkHelper.js";
 import {getCocktails} from "../../services/FirebaseServise.js";
 import {CocktailCard} from "../components/Cocktail.js";
 import {router} from "../../Router.js";
+import Loader from "../components/Loader.js";
 
 let Main = {
     render: async () => {
@@ -10,6 +11,7 @@ let Main = {
             <input id="live-search" type="search" class="search-input">
             <a href="/add" id="add-cocktail-button" class="add-cocktail-button">Add</a>
         </div>
+        ${Loader.render()}
         <ul id="cocktail-table" class="table-wrap"></ul>`
 
         return view
@@ -17,7 +19,9 @@ let Main = {
     after_render: async () => {
         document.getElementById("add-cocktail-button").addEventListener("click", linkHelper);
         let cocktails = await getCocktails();
+        cocktails.sort((a, b) => a.rating < b.rating ? 1 : -1);
         let list = document.getElementById("cocktail-table");
+        Loader.delete();
         if(cocktails){
             for (const element of cocktails) {
                 let item = document.createElement('li');
