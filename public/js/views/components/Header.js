@@ -19,17 +19,38 @@ let Header = {
              </nav>`;
 
         let view = `        
-            <div class="header-item">
+            <div class="header-item ">
                 <a href="/" class="header-title" id="home-button">Cocktail Database</a>
             </div>            
-            
-            <div class="header-item">
-                ${!localStorage.getItem('user') ? non_authorized : authorized }
+            <div class="header-item user-block">
+                <div class="header-item">
+                    <div id="switch" class="switch-btn"></div>
+                </div>
+                <div >
+                    ${!localStorage.getItem('user') ? non_authorized : authorized }
+                </div>                
             </div>`
 
         return view
     },
     after_render: async () => {
+        const switchBtn = document.getElementById("switch");
+        const body = document.getElementById("body-rood");
+        const currentTheme = localStorage.getItem("theme");
+        if (currentTheme === "dark") {
+            switchBtn.classList.add("switch-on");
+        }
+        switchBtn.addEventListener("click", (event)=>{
+            switchBtn.classList.toggle("switch-on");
+            if (switchBtn.classList.contains("switch-on")){
+                body.setAttribute("data-theme", "dark");
+                localStorage.setItem("theme", "dark");
+            }else{
+                body.setAttribute("data-theme", "light");
+                localStorage.setItem("theme", "light");
+            }
+        })
+
         document.getElementById("home-button").addEventListener("click", linkHelper);
         if(!localStorage.getItem('user')) {
             document.getElementById("sign-in-button").addEventListener("click", linkHelper);
